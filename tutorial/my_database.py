@@ -270,6 +270,11 @@ users: list[Any] = cursor.fetchall()
 
 print_results(users)
 
+# Очищаем базу данных
+print('Очищаем базу данных\n')
+
+cursor.execute('DELETE FROM Users')
+
 # Сохраняем изменения и закрываем соединение
 print('Сохраняем изменения и закрываем соединение\n')
 
